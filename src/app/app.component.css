@@ -1,3 +1,7 @@
 /* Component-level overrides, if any, go here.
    Shared design system lives in src/styles.css so it applies
    consistently across the whole app. */
+
+.nav-link.active {
+  color: #ff7a29 !important;
+}

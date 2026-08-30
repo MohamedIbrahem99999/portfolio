@@ -1,5 +1,6 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 
 interface Service {
   code: string;
@@ -33,11 +34,20 @@ interface Project {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule
+  
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.css'
 })
+
 export class AppComponent {
+  activeSection: string = 'home';
+
+  setActive(section: string): void {
+    this.activeSection = section;
+  }
   readonly name = 'Mohamed Ibrahem';
   readonly title = 'Front-End Developer';
   readonly email = 'moibrahem.aboelenen@gmail.com';

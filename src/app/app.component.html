@@ -18,22 +18,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-      <ul class="navbar-nav gap-1">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
+  <ul class="navbar-nav gap-1">
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="activeSection === 'home'" (click)="setActive('home')" href="#home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="activeSection === 'services'" (click)="setActive('services')" href="#services">Services</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="activeSection === 'about'" (click)="setActive('about')" href="#about">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="activeSection === 'experience'" (click)="setActive('experience')" href="#experience">Experience</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="activeSection === 'portfolio'" (click)="setActive('portfolio')" href="#portfolio">Portfolio</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [class.active]="activeSection === 'contact'" (click)="setActive('contact')" href="#contact">Contact</a>
+  </li>
+</ul>
     </div>
   </div>
 </nav>
