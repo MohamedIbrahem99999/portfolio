@@ -1,0 +1,381 @@
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-expand-lg navbar-dark app-navbar fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <img
+        src="assets/logo.png"
+        alt="Mohamed Ibrahem logo"
+        class="brand-logo image"
+      />
+      Mohamed Ibrahem<span>.</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header id="home" class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <p class="eyebrow mb-2">Hi, I'm</p>
+        <h1
+          class="display-font fw-bold"
+          style="font-size: clamp(2.4rem, 5vw, 3.6rem)"
+        >
+          {{ name }}
+        </h1>
+        <h2
+          class="display-font mb-4"
+          style="color: var(--accent); font-size: clamp(1.3rem, 2.4vw, 1.9rem)"
+        >
+          {{ title }}
+        </h2>
+        <p class="section-sub mb-4">
+          Front-End &amp; Web Developer focused on building clean, responsive,
+          user-friendly interfaces with JavaScript, TypeScript, Angular and
+          Bootstrap — backed by a strong troubleshooting instinct from years in
+          technical support.
+        </p>
+        <div class="d-flex flex-wrap gap-3 mb-5">
+          <a
+            class="btn-accent"
+            href="assets/Mohamed_Ibrahem_Front_End_Developer.pdf"
+            download="Mohamed_Ibrahem_CV.pdf"
+          >
+            Download CV
+          </a>
+          <a class="btn-outline-accent" href="#portfolio">View Projects</a>
+        </div>
+        <div class="d-flex flex-wrap gap-3">
+          <div class="hero-stat">
+            <div class="num">6+</div>
+            <div class="label">Live Projects</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">3+</div>
+            <div class="label">Years in Tech</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">7</div>
+            <div class="label">Core Skills</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 mx-auto">
+        <div class="hero-photo-frame">
+          <img src="assets/profile.png" alt="Portrait of Mohamed Ibrahem" />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="section">
+  <div class="container">
+    <p class="eyebrow">What I do</p>
+    <h2 class="section-title">Front-End Services</h2>
+    <p class="section-sub mb-5">
+      Focused on the front-end stack: markup, styling, logic and the frameworks
+      that hold it together.
+    </p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let s of services">
+        <div class="card-dark">
+          <div class="card-icon mono">{{ s.code }}</div>
+          <h5 class="display-font fw-semibold mb-2">{{ s.title }}</h5>
+          <p class="section-sub mb-0">{{ s.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section
+  id="about"
+  class="section"
+  style="
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  "
+>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="browser-frame">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="browser-url mono">about-me.dev</div>
+          </div>
+          <img
+            src="assets/profile.png"
+            alt="Mohamed Ibrahem"
+            style="
+              width: 100%;
+              display: block;
+              object-fit: cover;
+              max-height: 420px;
+              object-position: top;
+            "
+          />
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <p class="eyebrow">About Me</p>
+        <h2 class="section-title mb-4">From law school to the front-end</h2>
+        <p class="section-sub mb-3">
+          I hold a Bachelor of Law from Minya University, but my path led me
+          into technology — first through years of hands-on IT support and
+          troubleshooting, then into a Front-End Web Development diploma where I
+          found what I actually want to build: interfaces.
+        </p>
+        <p class="section-sub mb-4">
+          I work across JavaScript (ES6+), TypeScript, Angular, Bootstrap, HTML5
+          and CSS3, with C++ as a programming foundation underneath. Years spent
+          diagnosing real user problems in technical support carried over
+          directly into how I approach front-end work: clear structure, careful
+          debugging, and interfaces that just work.
+        </p>
+        <a
+          class="btn-accent"
+          href="assets/Mohamed_Ibrahem_Front_End_Developer.pdf"
+          download="Mohamed_Ibrahem_CV.pdf"
+          >Download CV</a
+        >
+      </div>
+    </div>
+
+    <div class="row mt-5 pt-4">
+      <div class="col-12">
+        <p class="eyebrow mb-4">Skill Set</p>
+        <div class="row">
+          <div class="col-md-6" *ngFor="let sk of skills">
+            <div class="skill-row">
+              <div class="top">
+                <span>{{ sk.name }}</span>
+                <span class="pct">{{ sk.level }}%</span>
+              </div>
+              <div class="progress-dark">
+                <div class="bar" [style.width.%]="sk.level"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience" class="section">
+  <div class="container">
+    <p class="eyebrow">Where I've Worked</p>
+    <h2 class="section-title mb-5">Experience</h2>
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="timeline">
+          <div class="timeline-item" *ngFor="let e of experience">
+            <div class="meta">{{ e.period }}</div>
+            <div class="role">{{ e.role }}</div>
+            <div class="mb-2" style="color: var(--text-muted)">
+              {{ e.company }}
+            </div>
+            <ul class="section-sub mb-0 ps-3">
+              <li *ngFor="let b of e.bullets">{{ b }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PORTFOLIO ===================== -->
+<section
+  id="portfolio"
+  class="section"
+  style="
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  "
+>
+  <div class="container">
+    <p class="eyebrow">Selected Work</p>
+    <h2 class="section-title mb-3">Portfolio</h2>
+    <p class="section-sub mb-4">
+      Every project below is live — click "Live Demo" to try it in your browser.
+    </p>
+
+    <div class="d-flex flex-wrap gap-2 mb-5">
+      <button
+        *ngFor="let f of filters"
+        class="filter-btn"
+        [class.active]="activeFilter === f"
+        (click)="setFilter(f)"
+        type="button"
+      >
+        {{ f }}
+      </button>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let p of filteredProjects">
+        <div class="browser-frame h-100 d-flex flex-column">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="browser-url mono">
+              {{ p.demoUrl.replace("https://", "") }}
+            </div>
+          </div>
+          <div class="project-visual">
+            <img
+              *ngIf="!failedImages[p.name]"
+              [src]="p.image"
+              [alt]="p.name + ' screenshot'"
+              (error)="failedImages[p.name] = true"
+            />
+            <div class="project-visual-fallback" *ngIf="failedImages[p.name]">
+              {{ p.name }}
+            </div>
+          </div>
+          <div class="project-body flex-grow-1 d-flex flex-column">
+            <span class="project-tag">{{ p.tag }}</span>
+            <h5 class="project-name">{{ p.name }}</h5>
+            <p class="section-sub mb-2 flex-grow-1">{{ p.desc }}</p>
+            <div class="d-flex flex-wrap gap-2 mb-1">
+              <span
+                class="mono"
+                style="
+                  font-size: 0.72rem;
+                  color: var(--text-muted);
+                  border: 1px solid var(--border);
+                  border-radius: 999px;
+                  padding: 2px 10px;
+                "
+                *ngFor="let t of p.tech"
+                >{{ t }}</span
+              >
+            </div>
+            <div class="project-links">
+              <a class="live" [href]="p.demoUrl" target="_blank" rel="noopener"
+                >▶ Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section">
+  <div class="container">
+    <p class="eyebrow">Get in Touch</p>
+    <h2 class="section-title mb-3">Contact Me</h2>
+    <p class="section-sub mb-5">
+      Have a project in mind or an opening on your team? Reach out — I reply
+      fast.
+    </p>
+
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="contact-info-item">
+          <div class="ico mono">&#64;</div>
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.85rem">
+              Email
+            </div>
+            <a [href]="'mailto:' + email">{{ email }}</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ico mono">#</div>
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.85rem">
+              Phone
+            </div>
+            <div>{{ phone1 }}</div>
+            <div>{{ phone2 }}</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ico mono">EG</div>
+          <div>
+            <div style="color: var(--text-muted); font-size: 0.85rem">
+              Location
+            </div>
+            <div>Cairo, Egypt</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <p class="section-sub mb-4" style="color: var(--text-muted)">
+          Or find me here:
+        </p>
+        <div class="row g-3">
+          <div class="col-sm-6" *ngFor="let s of socials">
+            <a
+              class="social-card"
+              [href]="s.url"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="ico mono">{{ s.icon }}</span>
+              <span>
+                <span class="social-card-name">{{ s.name }}</span>
+                <span class="social-card-handle">{{ s.handle }}</span>
+              </span>
+              <span class="social-card-arrow mono">&#8599;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="app-footer footer">
+  <div
+    class="container d-flex flex-wrap justify-content-center align-items-center"
+  >
+    <div class="mb-2 text-center">
+      © 2026 {{ name }}. Built with Angular &amp; Bootstrap.
+    </div>
+  </div>
+</footer>
